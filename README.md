@@ -38,10 +38,11 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ![Something like this!](./mockup/11-express-homework-demo.gif)
 
 ## TODO
-- [ ] Make this README
+- [x] Make this README
 - [ ] Make server.js
-    - [ ] Import express
-    - [ ] `GET *` returns index.html
+    - [x] Import express
+    - [x] `GET /` returns index.html
+    - [ ] `GET *` returns index.html (wildcard)
     - [ ] `GET /notes` returns notes.html
     - [ ] `GET /api/notes` reads and returns `db.json` saved notes
     - [ ] `POST /api/notes` receives request body with note details, appends to `db.json`
