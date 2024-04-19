@@ -22,11 +22,11 @@ app.get("/notes", (req, res) => {
     res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
 
-/*
+
 app.get("/api/notes", (req, res) => {
     res.json(terms);
 })
-*/
+
 
 // hmmmmmm today I shall use port 3001
 const PORT = 3001;
