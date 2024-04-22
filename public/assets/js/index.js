@@ -29,7 +29,7 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () => {
-  console.log("getNotes called")
+  //console.log("getNotes called")
   return fetch('/api/notes', {
     method: 'GET',
     headers: {
@@ -39,7 +39,7 @@ const getNotes = () => {
 };
 
 const saveNote = (note) => {
-  console.log("saveNote called")
+  //console.log("saveNote called")
   return fetch('/api/notes', {
     method: 'POST',
     headers: {
@@ -50,7 +50,7 @@ const saveNote = (note) => {
 };
 
 const deleteNote = (id) => {
-  console.log("deleteNote called")
+  //console.log("deleteNote called")
   return fetch(`/api/notes/${id}`, {
     method: 'DELETE',
     headers: {
@@ -61,19 +61,19 @@ const deleteNote = (id) => {
 
 // Renders editable note space
 const renderActiveNote = () => {
-  console.log("renderActiveNote()...")
+  //console.log("renderActiveNote()...")
   hide(saveNoteBtn);
   hide(clearBtn);
 
   if (activeNote.id) {
-    console.log(`activteNote.id == ${activeNote.id}`)
+    //console.log(`activteNote.id == ${activeNote.id}`)
     show(newNoteBtn);
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
   } else {
-    console.log("activteNote.id DOESN'T EXIST")
+    //console.log("activteNote.id DOESN'T EXIST")
     hide(newNoteBtn);
     noteTitle.removeAttribute('readonly');
     noteText.removeAttribute('readonly');
@@ -83,12 +83,12 @@ const renderActiveNote = () => {
 };
 
 const handleNoteSave = () => {
-  console.log("handleNoteSave called")
+  //console.log("handleNoteSave called")
   const newNote = {
     title: noteTitle.value,
     text: noteText.value
   };
-  console.log(`new note: ${newNote}`)
+  //console.log(`new note: ${newNote}`)
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
@@ -103,7 +103,7 @@ const handleNoteDelete = (e) => {
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
 
-  console.log(`ID to delete: ${noteId}`);
+  //console.log(`ID to delete: ${noteId}`);
 
   if (activeNote.id === noteId) {
     activeNote = {};

@@ -68,10 +68,9 @@ app.post("/api/notes", (req, res) => {
                     fs.writeFile(
                         "./db/db.json",
                         JSON.stringify(existingNotes, null, 4),
-                        (writeErr) =>
-                            writeErr
-                                ? console.error(writeErr)
-                                : console.info("Successfully updated notes!"));
+                        (writeErr) => writeErr
+                            ? console.error(writeErr)
+                            : console.info("Successfully updated notes!"));
                 }
             });
         }
@@ -85,7 +84,7 @@ app.post("/api/notes", (req, res) => {
 // TODO: DELETE "/api/notes/:id"
 app.delete("/api/notes/:id", (req, res) => {
     const id = req.params.id;
-    console.log("id to delete: " + id)
+    //console.log("id to delete: " + id)
     let currentNotes = JSON.parse(fs.readFileSync("./db/db.json"));
     let newNotes = [];
     for (let i=0; i < currentNotes.length; i++) {

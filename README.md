@@ -39,24 +39,24 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## TODO
 - [x] Make this README
-- [ ] Make server.js
+- [x] Make server.js
     - [x] Import express
     - [x] `GET /` returns index.html
     - [x] `GET *` returns index.html (wildcard)
     - [x] `GET /notes` returns notes.html
     - [x] `GET /api/notes` reads and returns `db.json` saved notes
-    - [ ] `POST /api/notes` receives request body with note details, appends to `db.json`
-    - [ ] `DELETE /api/notes/:id` receives note ID, removes from `db.json`, then saves `db.json`
+    - [x] `POST /api/notes` receives request body with note details, appends to `db.json`
+    - [x] `DELETE /api/notes/:id` receives note ID, removes from `db.json`, then saves `db.json`
 - [x] `/` Landing page with link to "/notes"
-- [ ] `/notes` Note view and editor
+- [x] `/notes` Note view and editor
     - [x] Give all notes unique ID's
-    - [ ] Default: New Note
-    - [ ] Nav bar buttons
-        - [ ] "New Note" ONLY WHEN looking at saved note.
-        - [ ] "Save Note" ONLY WHEN Title and Text exist, OR WHEN viewing saved but edited note.
-        - [ ] "Clear Form" ONLY WHEN drafting an new unsaved note.
-    - [ ] Delete Note icon button
-        - [ ] Make the `DELETE /api/notes/:id` request, update page
+    - [x] Default: New Note
+    - [x] Nav bar buttons
+        - [x] "New Note" ONLY WHEN looking at saved note.
+        - [x] "Save Note" ONLY WHEN Title and Text exist, OR WHEN viewing saved but edited note.
+        - [x] "Clear Form" ONLY WHEN drafting an new unsaved note.
+    - [x] Delete Note icon button
+        - [x] Make the `DELETE /api/notes/:id` request, update page
 - [ ] Deploy app to Heroku
 
 
