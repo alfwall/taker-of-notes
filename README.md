@@ -42,13 +42,14 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 - [ ] Make server.js
     - [x] Import express
     - [x] `GET /` returns index.html
-    - [ ] `GET *` returns index.html (wildcard)
+    - [x] `GET *` returns index.html (wildcard)
     - [x] `GET /notes` returns notes.html
     - [x] `GET /api/notes` reads and returns `db.json` saved notes
     - [ ] `POST /api/notes` receives request body with note details, appends to `db.json`
     - [ ] `DELETE /api/notes/:id` receives note ID, removes from `db.json`, then saves `db.json`
-- [ ] `/` Landing page with link to "/notes"
+- [x] `/` Landing page with link to "/notes"
 - [ ] `/notes` Note view and editor
+    - [x] Give all notes unique ID's
     - [ ] Default: New Note
     - [ ] Nav bar buttons
         - [ ] "New Note" ONLY WHEN looking at saved note.
