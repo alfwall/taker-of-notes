@@ -40,10 +40,6 @@ const getNotes = () => {
 
 const saveNote = (note) => {
   console.log("saveNote called")
-  console.log("note to stringify:")
-  console.log(note)
-  console.log("stringified: ")
-  console.log(JSON.stringify(note))
   return fetch('/api/notes', {
     method: 'POST',
     headers: {
@@ -106,6 +102,8 @@ const handleNoteDelete = (e) => {
 
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
+
+  console.log(`ID to delete: ${noteId}`);
 
   if (activeNote.id === noteId) {
     activeNote = {};

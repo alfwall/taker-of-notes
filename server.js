@@ -5,7 +5,10 @@ const express = require('express');
 const path = require("path");
 // Access the file system
 const fs = require('fs');
+// Helper for fs promises
 const util = require('util');
+
+// Helper method
 const readFromFile = util.promisify(fs.readFile)
 
 
@@ -80,6 +83,20 @@ app.post("/api/notes", (req, res) => {
 });
 
 // TODO: DELETE "/api/notes/:id"
+app.delete("/api/notes/:id", (req, res) => {
+    const id = req.params.id;
+    console.log("id to delete: " + id)
+    let currentNotes = JSON.parse(fs.readFileSync("./db/db.json"));
+    let newNotes = [];
+    for (let i=0; i < currentNotes.length; i++) {
+        if(currentNotes[i].id != req.params.id) {
+            newNotes.push(currentNotes[i]);
+        }
+    }
+    let newJSON = JSON.stringify(newNotes)
+    fs.writeFileSync("./db/db.json", newJSON);
+    res.status(200).json(newJSON)
+});
 
 
 // GET anything unspecified 404's to the index.html
