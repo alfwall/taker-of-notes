@@ -104,8 +104,8 @@ app.get("*", (req, res) => {
 });
 
 // hmmmmmm today I shall use port 3001
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 // Actually connect to that port
 app.listen(PORT, () => {
-    console.log(`Example app listening at http://localhost:${PORT}`);
+    //console.log(`Taker of Notes app listening at http://localhost:${PORT}`);
 });
