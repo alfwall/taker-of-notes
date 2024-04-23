@@ -1,12 +1,12 @@
 # Note Taker Starter Code
 
 ## Description
-XXXXXXXXXXXXXXXX
+An Express web app that can save and delete submitted notes.
 
 ## Result
-[Click here!](URL_TO_THE_DEPLOYED_APP)
+[Click here!](https://the-taker-of-notes-14c2f255e099.herokuapp.com/)
 
-![Screenshot of deployed note taker](LOCAL_URL_OF_SCREENSHOT)
+![Screenshot of deployed note taker](./images/screenshot-of-deployed-result.png)
 
 ## User Story
 AS A small business owner,
@@ -35,7 +35,7 @@ WHEN I click on the "New Note" button in the navigation at the top of the page,
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column and the button disappears.
 
 ## Mockup
-![Something like this!](./mockup/11-express-homework-demo.gif)
+![Something like this!](./images/11-express-homework-demo.gif)
 
 ## TODO
 - [x] Make this README
@@ -57,6 +57,6 @@ THEN I am presented with empty fields to enter a new note title and the note’s
         - [x] "Clear Form" ONLY WHEN drafting an new unsaved note.
     - [x] Delete Note icon button
         - [x] Make the `DELETE /api/notes/:id` request, update page
-- [ ] Deploy app to Heroku
+- [x] Deploy app to Heroku
 
 
